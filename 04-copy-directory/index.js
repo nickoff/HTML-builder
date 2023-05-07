@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-async function copyDir() {
-  const dirPath = path.join(__dirname, '/files');
+async function copyDir(nameDir) {
+  const dirPath = path.join(__dirname, nameDir);
   const newDirPath = path.join(`${dirPath}-copy`);
   const data = await fs.promises.readdir(dirPath);
   await fs.promises.mkdir(newDirPath, { recursive: true });
@@ -21,7 +21,7 @@ async function copyDir() {
 }
 
 try {
-  copyDir();
+  copyDir('files');
 } catch (err) {
   console.error(err);
 }
