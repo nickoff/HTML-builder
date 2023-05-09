@@ -12,7 +12,7 @@ async function copyDir(nameDir, newDirName) {
         if (fileStat.isFile()) {
           await fs.promises.copyFile(path.join(nameDir, elem), path.join(newDirName, elem));
         }
-        if (fileStat.isDirectory()) { await copyDir(`${nameDir}\\${elem}`, `${newDirName}\\${elem}`); }
+        if (fileStat.isDirectory()) { await copyDir(path.join(`${nameDir}`, `${elem}`), path.join(`${newDirName}`, `${elem}`)); }
       })();
     } catch (err) {
       console.error(err);
