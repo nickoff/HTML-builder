@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const pathDirCss = path.join(__dirname, './styles');
-const pathDirComponents = path.join(__dirname, './components');
+const pathDirCss = path.join(__dirname, 'styles');
+const pathDirComponents = path.join(__dirname, 'components');
 const pathDirAssets = path.join(__dirname, 'assets');
-const pathDirBundleAssets = path.join(pathDirAssets, '../project-dist/assets');
-const pathDirDist = path.join(__dirname, './project-dist');
-const pathTemplateFile = path.join(__dirname, './template.html');
+const pathDirBundleAssets = path.join(pathDirAssets, '..', 'project-dist', 'assets');
+const pathDirDist = path.join(__dirname, 'project-dist');
+const pathTemplateFile = path.join(__dirname, 'template.html');
 const fileNameCssBundle = 'style.css';
 const fileNameHtmlBundle = 'index.html';
 const cssFileExtname = '.css';
